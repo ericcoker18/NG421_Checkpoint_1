@@ -7,12 +7,15 @@ import { TodoListComponent } from './todo-list/todo-list.component';
 import { CreateTodoComponent } from './create-todo/create-todo.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
-import {RouterModule } from '@angular/router';
+import {Route, RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { TablesComponent } from './Component/tables/tables.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
 
-const routes = [];
+const routes: Route[] = [
+  {path: 'board', component: BoardComponent},
+  {path: 'table', component: TablesComponent}
+];
 const appRoutes = RouterModule.forRoot(routes);
 
 @NgModule({
