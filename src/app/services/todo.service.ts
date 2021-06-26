@@ -7,7 +7,7 @@ export class TodoService {
   todoId: number = 0;
   todoList: ITodo [] = [
     // example of how to make an item in todo list
-    { title: 'Install Angular CLI', id: this.todoId, },
+    { title: 'Install Angular CLI', id: this.todoId, status: 'Todo' },
 
   
   ];
@@ -16,6 +16,7 @@ export class TodoService {
   getTodos(status?: string): ITodo[] {
     if (!status){
     return this.todoList;}
+    return this.todoList.filter(t => t.status === status)
   }
   deleteTodo(todo: ITodo) {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
