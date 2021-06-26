@@ -9,13 +9,14 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from './confirmation-modal/confirmation-modal.component';
 import {Route, RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
-import { TablesComponent } from './Component/tables/tables.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { TableComponent } from './table/table.component';
 import { MatSortModule, MatTableModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 const routes: Route[] = [
   {path: 'board', component: BoardComponent},
-  {path: 'table', component: TablesComponent}
+  {path: 'table', component: TableComponent}
 ];
 const appRoutes = RouterModule.forRoot(routes);
 
@@ -27,8 +28,8 @@ const appRoutes = RouterModule.forRoot(routes);
     CreateTodoComponent,
     ConfirmationModalComponent,
     BoardComponent,
-    TablesComponent,
-    TodoEditComponent
+    TodoEditComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
@@ -36,9 +37,8 @@ const appRoutes = RouterModule.forRoot(routes);
     FormsModule,
     NgbModule,
     MatTableModule,
-    MatSortModule
-    
-    
+    MatSortModule,
+    NoopAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
