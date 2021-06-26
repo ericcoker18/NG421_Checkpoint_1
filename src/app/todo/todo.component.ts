@@ -2,6 +2,7 @@ import { Component, OnInit,Input } from '@angular/core';
 import {TodoService} from '../services/todo.service';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 import { ConfirmationModalComponent } from '../confirmation-modal/confirmation-modal.component';
+import { ITodo } from '../interfaces/itodo';
 
 @Component({
   selector: 'app-todo',
@@ -28,6 +29,11 @@ export class TodoComponent implements OnInit {
     catch(ex){
       
     }
+  }
+
+  async editTodo(todo:ITodo){
+    console.log("test")
+
   }
 
 

@@ -15,7 +15,8 @@ export class CreateTodoComponent implements OnInit {
   addTodo():void {
     this.todoService.addTodo({
       title: this.todoTitle,
-      status: 'Todo'
+      status: 'Todo',
+      description: ' '
     });
     
     // resets our todoTitle variable to an empty string
