@@ -13,7 +13,7 @@ export class TodoService {
   ];
   statuses: string[] = ['Todo', 'Doing', 'Done'];
   constructor() { }
-  getTodos(status?: string): ITodo{
+  getTodos(status?: string): ITodo[] {
     if (!status){
     return this.todoList;}
   }
@@ -21,9 +21,9 @@ export class TodoService {
     const index = this.todoList.findIndex(todoItem => todoItem === todo);
     this.todoList.splice(index, 1);
   }
-  addTodo(todo: ITodo):void {
+  addTodo(todo: ITodo ):void {
     todo.id = this.todoId ++;
-    todoList.push(todo);
+    this.todoList.push(todo);
   }
 
   getStatuses(): string[] {
