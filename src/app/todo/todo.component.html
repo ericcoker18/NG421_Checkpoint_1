@@ -1,5 +1,6 @@
 <div class="view">
     <label>{{todo.title}}</label>
+    <input *ngif = "isEditing" type = "text" [(NgModel)] = "todo.title" (blur) = "isEditing = false">
     <select [(ngModel)] = "todo.status"> 
         <option value="Todo">Todo</option>
         <option value="Doing">Doing</option>
