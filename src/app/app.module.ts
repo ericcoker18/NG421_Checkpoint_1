@@ -11,6 +11,7 @@ import {Route, RouterModule } from '@angular/router';
 import { BoardComponent } from './board/board.component';
 import { TablesComponent } from './Component/tables/tables.component';
 import { TodoEditComponent } from './todo-edit/todo-edit.component';
+import { MatSortModule, MatTableModule } from '@angular/material';
 
 const routes: Route[] = [
   {path: 'board', component: BoardComponent},
@@ -33,7 +34,11 @@ const appRoutes = RouterModule.forRoot(routes);
     BrowserModule,
     appRoutes,
     FormsModule,
-    NgbModule
+    NgbModule,
+    MatTableModule,
+    MatSortModule
+    
+    
   ],
   providers: [],
   bootstrap: [AppComponent],
