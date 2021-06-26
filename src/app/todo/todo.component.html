@@ -1,6 +1,7 @@
 <div class="view">
     <label (dblclick)="isEditing = true">{{todo.title}}</label>
     <input *ngIf = "isEditing" type = "text" [(ngModel)] = "todo.title" (blur) = "isEditing = false">
+    <label>{{todo.description}}</label>
     <select [(ngModel)] = "todo.status"> 
         <option value="Todo">Todo</option>
         <option value="Doing">Doing</option>
